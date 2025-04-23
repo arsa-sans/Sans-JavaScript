@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balok</title>
+</head>
+<body>
+  <h1>Rumus Balok</h1>
+  <label for="jari">Panjang</label>
+  <input type="number" id="panjang">
+  <label for="lebar">Lebar</label>
+  <input type="number" id="lebar">
+  <label for="tinggi">Tinggi</label>
+  <input type="number" id="tinggi">
+  <button id="hitung">Hitung</button>
+  <p>
+    Volume : <span id="Volume"></span>
+  </p>
+  <p>
+    Luas     : <span id="luas"></span>
+  </p>
+
+  <script>
+    const panjang = document.getElementById('panjang')
+    const lebar = document.getElementById('lebar')
+    const tinggi = document.getElementById('tinggi')
+    const hitung = document.getElementById('hitung')
+
+    const labelVolume = document.getElementById('Volume')
+    const labelluas = document.getElementById('luas')
+
+    hitung.addEventListener("click", function(){
+      let Volume = parseInt(panjang.value) * parseInt(lebar.value) * parseInt(tinggi.value)
+      labelVolume.innerHTML = Volume + " cm<sup>3</sup>"
+
+      let luas = 2 * (parseInt(panjang.value) * parseInt(lebar.value) + parseInt(panjang.value) * parseInt(tinggi.value) + parseInt(lebar.value) * parseInt(tinggi.value))
+      labelluas.innerHTML = luas + " cm<sup>2</sup>"
+    })
+
+  </script>
+</body>
+</html>
