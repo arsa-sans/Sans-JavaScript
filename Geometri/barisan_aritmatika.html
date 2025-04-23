@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barisan Aritmatika</title>
+</head>
+<body>
+  <h1>Barisan Aritmatika</h1>
+  <div>
+    <label for="n">Suku ke-n (Un)</label>
+    <input type="number" id="n">
+  </div>
+  <div>
+    <label for="a">Suku pertama</label>
+    <input type="number" id="a">
+  </div>
+  <div>
+    <label for="b">Selisih antara dua bilangan</label>
+    <input type="number" id="b">
+  </div>
+  <button id="hitung">Hitung</button>
+  <p>
+    Hasil baris aritmatika : <span id="hasil"></span>
+  </p>
+
+  <script>
+    const suku_ke = document.getElementById('n')
+    const pertama = document.getElementById('a')
+    const selisih = document.getElementById('b')
+    const hitung = document.getElementById('hitung')
+
+    const labelHasil = document.getElementById('hasil')
+
+    hitung.addEventListener(
+      "click", function(){
+        let result = parseInt(a.value) + (parseInt(n.value)-1) * parseInt(b.value)
+        labelHasil.innerHTML = result
+      }
+    )
+  </script>
+</body>
+</html>
