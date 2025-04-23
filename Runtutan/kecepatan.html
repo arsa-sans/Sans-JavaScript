@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kecepatan</title>
+</head>
+<body>
+  <h1>Rumus Kecepatan</h1>
+  <label for="Jarak">Jarak</label>
+  <input type="number" id="Jarak">
+  <label for="Waktu">Waktu</label>
+  <input type="number" id="Waktu">
+  <button id="hitung">Hitung</button>
+  <p>
+    v : <span id="Hasil"></span>
+  </p>
+
+  <script>
+    const phi = 3.14
+    const Jarak = document.getElementById('Jarak')
+    const Waktu = document.getElementById('Waktu')
+    const hitung = document.getElementById('hitung')
+
+    const labelHasil = document.getElementById('Hasil')
+    const labelluas = document.getElementById('luas')
+
+    hitung.addEventListener("click", function(){
+      let Hasil = parseInt(Jarak.value) / parseInt(Waktu.value)
+      labelHasil.innerHTML = Hasil + " m/s<sup>2</sup>"
+    })
+
+  </script>
+</body>
+</html>
