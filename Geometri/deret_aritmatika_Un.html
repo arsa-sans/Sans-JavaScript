@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barisan Aritmatika</title>
+</head>
+<body>
+  <h1>Barisan Aritmatika</h1>
+  <div>
+    <label for="n">Banyak suku yang dijumlahkan (n)</label>
+    <input type="number" id="n">
+  </div>
+  <div>
+    <label for="a">Suku pertama (a)</label>
+    <input type="number" id="a">
+  </div>
+  <div>
+    <label for="Un">Suku ke-n (Un)</label>
+    <input type="number" id="Un">
+  </div>
+  <button id="hitung">Hitung</button>
+  <p>
+    Sn = <span id="hasil"></span>
+  </p>
+
+  <script>
+    const suku = document.getElementById('n')
+    const pertama = document.getElementById('a')
+    const suku_ke = document.getElementById('Un')
+    const hitung = document.getElementById('hitung')
+
+    const labelHasil = document.getElementById('hasil')
+
+    hitung.addEventListener(
+      "click", function(){
+        let result = parseInt(n.value)/2 * (parseInt(a.value)+parseInt(Un.value))
+        labelHasil.innerHTML = result
+      }
+    )
+  </script>
+</body>
+</html>
