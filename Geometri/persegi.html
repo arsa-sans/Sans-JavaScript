@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persegi</title>
+</head>
+<body>
+  <h1>Rumus Persegi</h1>
+  <label for="sisi">Sisi</label>
+  <input type="number" id="sisi">
+  <button id="hitung">Hitung</button>
+  <p>
+    Keliling : <span id="Keliling"></span>
+  </p>
+  <p>
+    Luas     : <span id="luas"></span>
+  </p>
+
+  <script>
+    const phi = 3.14
+    const sisi = document.getElementById('sisi')
+    const hitung = document.getElementById('hitung')
+
+    const labelKeliling = document.getElementById('Keliling')
+    const labelluas = document.getElementById('luas')
+
+    hitung.addEventListener("click", function(){
+      let Keliling = 4 * parseInt(sisi.value)
+      labelKeliling.innerHTML = Keliling
+
+      let luas = parseInt(sisi.value) * parseInt(sisi.value)
+      labelluas.innerHTML = luas + " cm<sup>2</sup>"
+    })
+
+  </script>
+</body>
+</html>
