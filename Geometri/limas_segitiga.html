@@ -8,15 +8,19 @@
 <body>
   <h1>Kerucut</h1>
   <div>
-    <label for="ls">Luas sisi</label>
+    <label for="ls">Luas Alas</label>
     <input type="number" id="ls">
   </div>
   <div>
-    <label for="la">Luas alas</label>
-    <input type="number" id="la">
+    <label for="tp">Tinggi Prisma</label>
+    <input type="number" id="tp">
   </div>
   <div>
-    <label for="t">Tinggi</label>
+    <label for="alas">Alas</label>
+    <input type="number" id="alas">
+  </div>
+  <div>
+    <label for="t">Tinggi Segitiga</label>
     <input type="number" id="t">
   </div>
   <button id="hitung">Hitung</button>
@@ -28,9 +32,10 @@
   </p>
 
   <script>
-    const luasSisi = document.getElementById('ls')
-    const luasAlas = document.getElementById('la')
+    const tinggiPrisma = document.getElementById('tp')
+    const luasAlas = document.getElementById('ls')
     const tinggi = document.getElementById('t')
+    const alas = document.getElementById('alas')
     const hitung = document.getElementById('hitung')
 
     const luasPermukaan = document.getElementById('luasPermukaan')
@@ -38,8 +43,8 @@
 
     hitung.addEventListener(
       "click", function(){
-        let result_luasPermukaan = parseInt(luasSisi.value) * 5
-        let result_volume = 1/3 * parseInt(luasAlas.value) * parseInt(tinggi.value)
+        let result_luasPermukaan = parseInt(luasAlas.value) * 4
+        let result_volume = (parseInt(alas.value) * parseInt(tinggi.value) * parseInt(tinggiPrisma.value)) / 6
 
         luasPermukaan.innerHTML = result_luasPermukaan + " cm<sup>2</sup>"
         volume.innerHTML = result_volume + " cm<sup>3</sup>"
