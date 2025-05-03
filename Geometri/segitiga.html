@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segitiga</title>
+</head>
+<body>
+  <h1>Segitiga</h1>
+  <label for="t">Tinggi</label>
+  <input type="number" id="t">
+  <label for="a">Alas</label>
+  <input type="number" id="a">
+  <button id="hitung">Hitung</button>
+  <p>
+    Luas : <span id="HasilLuas"></span>
+  </p>
+  <p>
+    Keliling : <span id="HasilKeliling"></span>
+  </p>
+
+  <script>
+    const tinggi = document.getElementById('t')
+    const alas = document.getElementById('a')
+    const hitung = document.getElementById('hitung')
+
+    const labelLuas = document.getElementById('HasilLuas')
+    const labelKeliling = document.getElementById('HasilKeliling')
+
+    hitung.addEventListener("click", function(){
+      let L = parseInt(alas.value) * parseInt(tinggi.value) / 2
+      let K = 3 * parseInt(alas.value)
+
+      labelLuas.innerHTML = `${L} cm<sup>2</sup>`
+      labelKeliling.innerHTML = `${K} cm`
+    })
+
+  </script>
+</body>
+</html>
