@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trapesium</title>
+</head>
+<body>
+  <h1>Trapesium</h1>
+  <label for="x">Panjang AB</label>
+  <input type="number" id="x">
+  <label for="y">Panjang BC</label>
+  <input type="number" id="y">
+  <label for="a">Panjang CD</label>
+  <input type="number" id="a">
+  <label for="b">Panjang AD</label>
+  <input type="number" id="b">
+  <label for="t">Tinggi</label>
+  <input type="number" id="t">
+  <button id="hitung">Hitung</button>
+  <p>
+    Keliling : <span id="HasilKeliling"></span>
+  </p>
+  <p>
+    Luas : <span id="HasilLuas"></span>
+  </p>
+
+  <script>
+    const x = document.getElementById('x')
+    const y = document.getElementById('y')
+    const a = document.getElementById('a')
+    const b = document.getElementById('b')
+    const t = document.getElementById('t')
+    const hitung = document.getElementById('hitung')
+
+    const labelLuas = document.getElementById('HasilLuas')
+    const labelKeliling = document.getElementById('HasilKeliling')
+
+    hitung.addEventListener("click", function(){
+      let L = (parseInt(y.value) + parseInt(b.value)) / 2 * parseInt(t.value)
+      let K = parseInt(x.value) + parseInt(y.value) + parseInt(a.value) + parseInt(b.value)
+
+      labelLuas.innerHTML = `${L} cm<sup>2</sup>`
+      labelKeliling.innerHTML = `${K} cm`
+    })
+  </script>
+</body>
+</html>
