@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refleksi Garis y=x</title>
+</head>
+<body>
+  <h1>Refleksi Garis y=x</h1>
+  <label for="x">Sumbu x</label>
+  <input type="number" id="x">
+  <label for="y">Sumbu y</label>
+  <input type="number" id="y">
+  <button id="hitung">Hitung</button>
+  <p>
+    Hasil refleksi terhadap garis y=x : <span id="Hasil"></span>
+  </p>
+
+  <script>
+    const phi = 3.14
+    const x = document.getElementById('x')
+    const y = document.getElementById('y')
+    const hitung = document.getElementById('hitung')
+
+    const labelHasil = document.getElementById('Hasil')
+
+    hitung.addEventListener("click", function(){
+      let a = parseInt(x.value)
+      let b = parseInt(y.value)
+
+      labelHasil.innerHTML = `(${b}, ${a})`
+    })
+
+  </script>
+</body>
+</html>
