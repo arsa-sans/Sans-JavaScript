@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translasi</title>
+</head>
+<body>
+  <h1>Translasi</h1>
+  <label for="x">Sumbu x</label>
+  <input type="number" id="x">
+  <label for="y">Sumbu y</label>
+  <input type="number" id="y">
+  <label for="a">Translasi sumbu x</label>
+  <input type="number" id="a">
+  <label for="b">Translasi sumbu y</label>
+  <input type="number" id="b">
+  <button id="hitung">Hitung</button>
+  <p>
+    Hasil Translasi : <span id="Hasil"></span>
+  </p>
+
+  <script>
+    const x = document.getElementById('x')
+    const y = document.getElementById('y')
+    const a = document.getElementById('a')
+    const b = document.getElementById('b')
+    const hitung = document.getElementById('hitung')
+
+    const labelHasil = document.getElementById('Hasil')
+
+    hitung.addEventListener("click", function(){
+      let m = parseInt(x.value) + parseInt(a.value)
+      let n = parseInt(y.value) + parseInt(b.value)
+
+      labelHasil.innerHTML = `(${m}, ${n})`
+    })
+  </script>
+</body>
+</html>
