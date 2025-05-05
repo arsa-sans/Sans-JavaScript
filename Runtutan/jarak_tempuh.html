@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jarak tempuh</title>
+</head>
+<body>
+  <h1>Jarak tempuh</h1>
+  <label for="inpJarak">Masukan jarak tempuh</label>
+  <input type="number" id="inpJarak">
+  <button id="hitung">Hitung</button>
+  <p>
+    Jarak tempuh adalah : <span id="hasilTempuh"></span>
+  </p>
+
+  <script>
+    const prcJarak = document.getElementById('inpJarak')
+    const hitung = document.getElementById('hitung')
+
+    const labelHasil = document.getElementById('hasilTempuh')
+
+    hitung.addEventListener("click", function(){
+      let kilometer = parseInt(prcJarak.value) / 10000
+      let sisa_jarak_km = parseInt(prcJarak.value) % 10000
+
+      let meter = parseInt(prcJarak.value) / 100
+      let sisa_jarak_m = sisa_jarak_km % 100
+
+      let cm = parseInt(prcJarak.value)
+      let sisa_jarak_cm = sisa_jarak_m % parseInt(prcJarak.value)
+
+      labelHasil.innerHTML = `${kilometer} KM, ${meter} M, ${cm} CM}`
+    })
+
+  </script>
+</body>
+</html>
