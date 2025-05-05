@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energi Kinetik</title>
+</head>
+<body>
+  <h1>Energi Kinetik</h1>
+  <label for="massa">Massa</label>
+  <input type="number" id="massa">
+  <label for="v">Kecepatan</label>
+  <input type="number" id="v">
+  <button id="hitung">Hitung</button>
+  <p>
+    Energi Kinetik : <span id="Hasil"></span>
+  </p>
+
+  <script>
+    const massa = document.getElementById('massa')
+    const kecepatan = document.getElementById('v')
+    const hitung = document.getElementById('hitung')
+
+    const labelHasil = document.getElementById('Hasil')
+
+    hitung.addEventListener("click", function(){
+      let ek = 1/2 * parseInt(massa.value) * parseInt(v.value) * parseInt(v.value)
+
+      labelHasil.innerHTML = `${ek} J`
+    })
+
+  </script>
+</body>
+</html>
