@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menentukan gaji bersih karyawan</title>
+</head>
+<body>
+  <h1>Menentukan gaji bersih karyawan</h1>
+  <label for="nama">Nama karyawan</label>
+  <input type="text" id="nama">
+  <label for="gaji_pokok">Gaji pokok karyawan</label>
+  <input type="number" id="gaji_pokok">
+  <button id="hitung">Hitung</button>
+  <p>
+    Nama karyawan : <span id="hasil_nama"></span>
+  </p>
+  <p>
+    Gaji pokok : <span id="gajiPokok"></span>
+  </p>
+  <p>
+    Tunjangan : <span id="tunjangan"></span>
+  </p>
+  <p>
+    Pajak : <span id="pajak"></span>
+  </p>
+  <p>
+    Gaji bersih : <span id="gaji-bersih"></span>
+  </p>
+
+  <script>
+    const Gajipokok = document.getElementById('gaji_pokok')
+    const Nama = document.getElementById('nama')
+    const hitung = document.getElementById('hitung')
+
+    const labelNama = document.getElementById('hasil_nama')
+    const labelGajiPokok = document.getElementById('gajiPokok')
+    const labelTunjangan = document.getElementById('tunjangan')
+    const labelPajak = document.getElementById('pajak')
+    const labelGajiBersih = document.getElementById('gaji-bersih')
+
+    hitung.addEventListener("click", function(){
+      let tunjanganHasil = 0.2 * parseInt(Gajipokok.value)
+      let pajakHasil = 0.15 * (parseInt(Gajipokok.value) + tunjanganHasil)
+      let gaji_bersih = (parseInt(Gajipokok.value) + tunjanganHasil) - pajakHasil
+
+      labelNama.innerHTML = `Rp. ${Nama}`
+      labelGajiPokok.innerHTML = `Rp. ${Gajipokok}`
+      labelTunjangan.innerHTML = `Rp. ${tunjanganHasil}`
+      labelPajak.innerHTML = `Rp. ${pajakHasil}`
+      labelGajiBersih.innerHTML = `Rp. ${gaji_bersih}`
+    })
+
+  </script>
+</body>
+</html>
