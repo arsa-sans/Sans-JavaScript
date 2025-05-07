@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konversi Suhu</title>
+</head>
+<body>
+  <h1>Konversi Suhu</h1>
+  <label for="inpSuhu">Masukan panjang dalam celcius</label>
+  <input type="number" id="inpSuhu">
+  <button id="hitung">Hitung</button>
+  <p>
+    Konversi Suhu adalah : <span id="hasilKonversi"></span>
+  </p>
+
+  <script>
+    let prcSuhu = document.getElementById('inpSuhu')
+    const hitung = document.getElementById('hitung')
+
+    const labelHasil = document.getElementById('hasilKonversi')
+
+    hitung.addEventListener("click", function(){
+      let reamur = parseInt(prcSuhu.value) * 4/5
+
+      let fahrenheit = 9/5 * parseInt(prcSuhu.value) + 32
+      
+      let kelvin = parseInt(prcSuhu.value) + 273
+
+      labelHasil.innerHTML = `${kelvin} kelvin, ${fahrenheit} fahrenheit, ${kelvin} kelvin`
+    })
+
+  </script>
+</body>
+</html>
