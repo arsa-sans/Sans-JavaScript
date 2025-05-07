@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalor Jenis Es</title>
+</head>
+<body>
+  <h1>Kalor Jenis Es</h1>
+  <label for="massa">Massa</label>
+  <input type="number" id="massa">
+  <label for="suhu2">Suhu kedua</label>
+  <input type="number" id="suhu2">
+  <label for="suhu1">Suhu pertama</label>
+  <input type="number" id="suhu1">
+  <button id="hitung">Hitung</button>
+  <p>
+    Kalor Jenis Es : <span id="Hasil"></span>
+  </p>
+
+  <script>
+    const massa = document.getElementById('massa')
+    const suhu1 = document.getElementById('suhu1')
+    const suhu2 = document.getElementById('suhu2')
+
+    const labelHasil = document.getElementById('Hasil')
+
+    hitung.addEventListener("click", function(){
+      let Q = parseInt(massa.value) * 2100 * (parseInt(suhu2.value)-parseInt(suhu1.value))
+
+      labelHasil.innerHTML = `${Q} J`
+    })
+
+  </script>
+</body>
+</html>
