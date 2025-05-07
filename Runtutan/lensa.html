@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lensa Objektif dan Lensa Okuler</title>
+</head>
+<body>
+  <h1>Lensa Objektif dan Lensa Okuler</h1>
+  <label for="fob">Lensa Objektif</label>
+  <input type="number" id="fob">
+  <label for="fp">Lensa Pembalik</label>
+  <input type="number" id="fp">
+  <label for="fok">Lensa Okuler</label>
+  <input type="number" id="fok">
+  <button id="hitung">Hitung</button>
+  <p>
+    Panjang teropong adalah : <span id="Hasil"></span>
+  </p>
+
+  <script>
+    const fob = document.getElementById('fob')
+    const fok = document.getElementById('fok')
+    const fp = document.getElementById('fp')
+
+    const labelHasil = document.getElementById('Hasil')
+
+    hitung.addEventListener("click", function(){
+      let Q = parseInt(fob.value) + (4*parseInt(fp.value)) + parseInt(fok.value)
+
+      labelHasil.innerHTML = `${Q} mm`
+    })
+
+  </script>
+</body>
+</html>
