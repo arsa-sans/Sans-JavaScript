@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menentukan Jarak Tempuh</title>
+</head>
+<body>
+  <h1>Menentukan Jarak Tempuh</h1>
+  <label for="t">Lama waktu tempuh</label>
+  <input type="number" id="t">
+  <label for="v">Kecepatan tetap</label>
+  <input type="number" id="v">
+  <button id="hitung">Hitung</button>
+  <p>
+    Jarak tempuh adalah : <span id="Hasil"></span>
+  </p>
+
+  <script>
+    const waktu = document.getElementById('t')
+    const V = document.getElementById('v')
+    const hitung = document.getElementById('hitung')
+
+    const labelHasil = document.getElementById('Hasil')
+
+    hitung.addEventListener("click", function(){
+      let s = parseInt(waktu.value) * parseInt(V.value)
+
+      labelHasil.innerHTML = `${s} m`
+    })
+
+  </script>
+</body>
+</html>
