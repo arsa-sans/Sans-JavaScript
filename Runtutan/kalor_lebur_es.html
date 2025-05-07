@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalor Lebur Es</title>
+</head>
+<body>
+  <h1>Kalor Lebur Es</h1>
+  <label for="massa">Massa</label>
+  <input type="number" id="massa">
+  <button id="hitung">Hitung</button>
+  <p>
+    Kalor Lebur Es : <span id="Hasil"></span>
+  </p>
+
+  <script>
+    const massa = document.getElementById('massa')
+
+    const labelHasil = document.getElementById('Hasil')
+
+    hitung.addEventListener("click", function(){
+      let Q = parseInt(massa.value) * 336000
+
+      labelHasil.innerHTML = `${Q} J`
+    })
+
+  </script>
+</body>
+</html>
