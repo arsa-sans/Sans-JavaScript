@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konversi Hari</title>
+</head>
+<body>
+  <h1>Konversi Detik</h1>
+  <label for="inpHari">Masukan Hari</label>
+  <input type="number" id="inpHari">
+  <button id="hitung">Hitung</button>
+  <p>
+    Konversi Hari adalah : <span id="hasilKonversi"></span>
+  </p>
+
+  <script>
+    let prcHari = document.getElementById('inpHari')
+    const hitung = document.getElementById('hitung')
+
+    const labelHasil = document.getElementById('hasilKonversi')
+
+    hitung.addEventListener("click", function(){
+      let tahun = parseInt(prcHari.value) / 365
+      prcHari = parseInt(prcHari.value) % 365
+
+      let bulan = parseInt(prcHari.value) / 30
+      prcHari = parseInt(prcHari.va) % 30
+
+      labelHasil.innerHTML = `${tahun} tahun, ${bulan} bulan, ${prcHari}`
+    })
+
+  </script>
+</body>
+</html>
