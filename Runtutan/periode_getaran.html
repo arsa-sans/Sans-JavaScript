@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frekuensi Getaran</title>
+</head>
+<body>
+  <h1>Frekuensi Getaran</h1>
+  <label for="t">Lama waktu</label>
+  <input type="number" id="t">
+  <label for="n">Jumlah getaran</label>
+  <input type="number" id="n">
+  <button id="hitung">Hitung</button>
+  <p>
+    Frekuensi Getaran : <span id="Hasil"></span>
+  </p>
+
+  <script>
+    const waktu = document.getElementById('t')
+    const N = document.getElementById('n')
+    const hitung = document.getElementById('hitung')
+
+    const labelHasil = document.getElementById('Hasil')
+
+    hitung.addEventListener("click", function(){
+      let F = parseInt(N.value) / parseInt(waktu.value)
+
+      labelHasil.innerHTML = `${F} Hz`
+    })
+
+  </script>
+</body>
+</html>
