@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frekuensi Getaran</title>
+  <title>Periode Getaran</title>
 </head>
 <body>
-  <h1>Frekuensi Getaran</h1>
+  <h1>Periode Getaran</h1>
   <label for="t">Lama waktu</label>
   <input type="number" id="t">
   <label for="n">Jumlah getaran</label>
   <input type="number" id="n">
   <button id="hitung">Hitung</button>
   <p>
-    Frekuensi Getaran : <span id="Hasil"></span>
+    Periode Getaran : <span id="Hasil"></span>
   </p>
 
   <script>
@@ -24,9 +24,9 @@
     const labelHasil = document.getElementById('Hasil')
 
     hitung.addEventListener("click", function(){
-      let F = parseInt(N.value) / parseInt(waktu.value)
+      let F = parseInt(waktu.value) / parseInt(N.value)
 
-      labelHasil.innerHTML = `${F} Hz`
+      labelHasil.innerHTML = `${F} sekon`
     })
 
   </script>
