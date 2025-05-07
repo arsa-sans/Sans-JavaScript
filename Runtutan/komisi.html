@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komisi</title>
+</head>
+<body>
+  <h1>Komisi</h1>
+  <label for="komisi">Harga jual</label>
+  <input type="number" id="komisi">
+  <button id="hitung">Hitung</button>
+  <p>
+    Komisi : Rp. <span id="Hasil"></span>
+  </p>
+
+  <script>
+    const komisi = document.getElementById('komisi')
+
+    const labelHasil = document.getElementById('Hasil')
+
+    hitung.addEventListener("click", function(){
+      let hasil = parseInt(komisi.value) * 5 / 100
+
+      labelHasil.innerHTML = `${hasil}`
+    })
+
+  </script>
+</body>
+</html>
