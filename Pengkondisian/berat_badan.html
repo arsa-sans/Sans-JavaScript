@@ -17,17 +17,19 @@
   </div>
   <button onclick="ideal()">Hitung</button>
   <p id="hasil"></p>
+  <p id="out"></p>
 
   <script>
     function ideal(){
       const berat = document.getElementById('berat')
       const tinggi = document.getElementById('tinggi')
       const out = document.getElementById('hasil')
+      const output = document.getElementById('out')
 
-      let operasi = parseInt(berat.value) - 100
+      let operasi = parseInt(tinggi.value) - 100
       let ideal = operasi - 0.1
       
-      out.textContent = `Berat badan ideal anda adalah : ${ideal} kg`
+      output.textContent = `Berat badan ideal anda adalah : ${ideal} kg`
 
       if (parseInt(berat.value) >= (ideal - 2) && parseInt(berat.value) <= (ideal + 2)) {
         out.textContent = 'Berat badan ideal';
