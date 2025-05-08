@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulan</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bulan</h1>
+        <div>
+            <label for="bulan">Masukan angka bulan</label>
+            <input type="text" id="bulan">
+        </div>
+
+        <button onclick="bulan()">Hasil</button>
+        <p id="hasil"></p>
+    </div>
+
+    <script>
+      function bulan() {
+        const bulanInp = document.getElementById('bulan').value.toLowerCase()
+        const out = document.getElementById('hasil')
+
+        if(bulanInp == "januari"){
+          out.textContent = 'Bulan depan adalah Februari'
+        }else if (bulanInp == "februari"){
+          out.textContent = 'Bulan depan adalah Maret'
+        }else if (bulanInp == "maret"){
+          out.textContent = 'Bulan depan adalah April'
+        }else if (bulanInp == "april"){
+          out.textContent = 'Bulan depan adalah Mei'
+        }else if (bulanInp == "mei"){
+          out.textContent = 'Bulan depan adalah Juni'
+        }else if (bulanInp == "juni"){  
+          out.textContent = 'Bulan depan adalah Juli'
+        }else if (bulanInp == "juli") {
+          out.textContent = 'Bulan depan adalah Agustus'
+        }else if (bulanInp == "agustus"){
+          out.textContent = 'Bulan depan adalah September'
+        }else if (bulanInp == "september"){
+          out.textContent = 'Bulan depan adalah September'
+        }else if (bulanInp == "oktober"){
+          out.textContent = 'Bulan depan adalah Oktober'
+        }else if (bulanInp == "november"){
+          out.textContent = 'Bulan depan adalah Desember'
+        }else if (bulanInp == "desember"){
+          out.textContent = 'Bulan depan adalah januari'
+        }else{
+          out.textContent = 'ini bukan nama bulan'
+        }
+    }
+    </script> 
+</body>
+</html>
