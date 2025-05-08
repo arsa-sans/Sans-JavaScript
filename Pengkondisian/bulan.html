@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulan</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bulan</h1>
+        <div>
+            <label for="bulan">Masukan angka bulan</label>
+            <input type="number" id="bulan">
+        </div>
+
+        <button onclick="bulan()">Hitung</button>
+        <p id="hasil"></p>
+    </div>
+
+    <script>
+      function bulan() {
+        const bulanInp = document.getElementById('bulan')
+        const out = document.getElementById('hasil');
+        const bulan = parseInt(bulanInp.value)
+
+        if(bulan == 1){
+          out.textContent = 'JANUARI'
+        }else if (bulan == 2){
+          out.textContent = 'FEBRUARI'
+        }else if (bulan == 3){
+          out.textContent = 'MARET'
+        }else if (bulan == 4){
+          out.textContent = 'APRIL'
+        }else if (bulan == 5){
+          out.textContent = 'MEI'
+        }else if (bulan == 6){  
+          out.textContent = 'JUNI'
+        }else if (bulan == 7) {
+          out.textContent = 'JULI'
+        }else if (bulan == 8){
+          out.textContent = 'AGUSUTS'
+        }else if (bulan == 9){
+          out.textContent = 'SEPTEMBER'
+        }else if (bulan == 10){
+          out.textContent = 'OKTOBER'
+        }else if (bulan == 11){
+          out.textContent = 'NOVEMBER'
+        }else if (bulan == 12){
+          out.textContent = 'DESEMBER'
+        }else{
+          out.textContent = 'nomor bulan tidak valid'
+        }
+    }
+    </script> 
+</body>
+</html>
