@@ -6,6 +6,40 @@
   <title>Bayar parkir</title>
 </head>
 <body>
-  
+  <h1>Bayar parkir</h1>
+  <div>
+    <label for="masuk">Masukan jam masuk</label>
+    <input type="number" id="masuk">
+  </div>
+  <div>
+    <label for="keluar">Masukan jam keluar</label>
+    <input type="number" id="keluar">
+  </div>
+  <button onclick="parkir()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function parkir(){
+      const masuk = document.getElementById('masuk')
+      const keluar = document.getElementById('keluar')
+      const out = document.getElementById('hasil')
+
+      const jam_masuk = parseFloat(masuk.value)
+      const jam_keluar = parseFloat(keluar.value)
+
+      if (jam_keluar < jam_masuk){
+        outOutput.textContent = 'Jam keluar tidak boleh lebih awal dari jam masuk.'
+      }else{
+        lama_parkir = jam_keluar - jam_masuk
+        biaya = 2000
+      }
+
+      if( lama_parkir > 2){
+        biaya += (lama_parkir - 2) * 1000
+      }
+
+          out.textContent = `Biaya = Rp. ${biaya}`
+        }
+  </script>
 </body>
 </html>
