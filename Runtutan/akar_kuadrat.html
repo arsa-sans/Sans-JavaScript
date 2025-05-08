@@ -13,21 +13,21 @@
             <label for="sisi">Masukan angka:</label>
             <input type="number" id="angka">
         </div>
-        <button onclick="ak()">Hitung</button>
+        <button onclick="hitung()">Hitung</button>
         <div id="hasil" class="hasil">
             <p id="out"></p>
         </div>
     </div>
 
     <script>
-      function ak() {
+      function hitung() {
       const angkaInput = document.getElementById('angka');
-      const outOutput = document.getElementById('out');
+      const Output = document.getElementById('out');
 
       const angka = parseFloat(angkaInput.value)
 
       let akar_kuadrat = angka ** 0.5
-      outOutput.textContent = `Akar Kuadrat dari ${angka} adalah ${akar_kuadrat}`
+      Output.textContent = `Akar Kuadrat dari ${angka} adalah ${akar_kuadrat}`
 }
     </script> 
 </body>
