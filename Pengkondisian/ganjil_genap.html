@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menentukan ganjil genap</title>
+</head>
+<body>
+  <h1>Menentukan ganjil genap</h1>
+  <div>
+      <label for="angka">Masukan angka</label>
+      <input type="angka" id="angka">
+  </div>
+
+  <button onclick="hasil()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hasil() {
+      const angkaInp = document.getElementById('angka')
+      const out = document.getElementById('hasil')
+      const hasilAngka = parseInt(angkaInp.value)
+
+      if(hasilAngka % 2 == 0){
+        out.textContent = 'GENAP'
+      } else {
+        out.textContent = 'GANJIL'
+      }
+    }
+    </script> 
+</body>
+</html>
