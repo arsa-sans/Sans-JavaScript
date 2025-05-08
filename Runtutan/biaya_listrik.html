@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biaya listrik</title>
+</head>
+<body>
+  <h1>Biaya listrik</h1>
+  <div>
+    <label for="bulanan">Penggunaan perbulan</label>
+    <input type="number" id="bulanan">
+  </div>
+  <div>
+    <label for="daya">Besar daya (watt)</label>
+    <input type="number" id="daya">
+  </div>
+  <div>
+    <label for="jam">Jam pemakaian</label>
+    <input type="number" id="jam">
+  </div>
+  <button onclick="listrik()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function listrik(){
+      const bulanan = document.getElementById('bulanan')
+      const daya = document.getElementById('daya')
+      const jam = document.getElementById('jam')
+      const out = document.getElementById('hasil')
+      const tarif = 1500
+      
+      let biaya_listrik = (parseInt(daya.value) / 1000) * parseInt(jam.value) * tarif * 30 * parseInt(bulanan.value)
+
+      out.textContent = `Biaya listrik selama ${parseInt(bulanan.value)} bulan adalah Rp. ${biaya_listrik}`
+
+      // if (isNaN(bulanan,daya,jam)) {
+      //   out.textContent = 'inputan anda tidak valid'
+      //   out.textContent = "masukan bilangan bulat / float"
+      //   return
+      // }
+
+    }
+  </script>
+</body>
+</html>
