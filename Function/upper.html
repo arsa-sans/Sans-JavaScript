@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper</title>
+</head>
+<body>
+  <h1>Upper</h1>
+  <div>
+      <label for="text">Masukan text</label>
+      <input type="text" id="text">
+  </div>
+
+  <button onclick="hasil()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hasil() {
+      const textInp = document.getElementById('text').value
+      const out = document.getElementById('hasil')
+
+      let besar = textInp.toUpperCase()
+      out.textContent = `Text asal "${textInp}" menjadi "${besar}"`
+    }
+    </script> 
+</body>
+</html>
