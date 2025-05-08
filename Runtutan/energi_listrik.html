@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energi Listrik</title>
+</head>
+<body>
+  <h1>Energi Listrik</h1>
+  <div>
+    <label for="muatan">Masukan muatan listrik</label>
+    <input type="number" id="muatan">
+  </div>
+  <div>
+    <label for="potensial">Masukan potensial listrik</label>
+    <input type="number" id="potensial">
+  </div>
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung(){
+      const muatan = document.getElementById('muatan')
+      const potensial = document.getElementById('potensial')
+      const out = document.getElementById('hasil')
+
+      let epl = parseInt(muatan.value) * parseInt(potensial.value)
+      out.textContent = `Energi potensial listrik ${epl} J`
+    }
+  </script>
+</body>
+</html>
