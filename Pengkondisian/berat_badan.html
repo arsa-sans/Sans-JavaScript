@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berat badan ideal</title>
+</head>
+<body>
+  <h1>Berat badan ideal</h1>
+  <div>
+    <label for="berat">Masukan berat badan (kg)</label>
+    <input type="number" id="berat">
+  </div>
+  <div>
+    <label for="tinggi">Masukan tinggi badan (cm)</label>
+    <input type="number" id="tinggi">
+  </div>
+  <button onclick="ideal()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function ideal(){
+      const berat = document.getElementById('berat')
+      const tinggi = document.getElementById('tinggi')
+      const out = document.getElementById('hasil')
+
+      let operasi = parseInt(berat.value) - 100
+      let ideal = operasi - 0.1
+      
+      out.textContent = `Berat badan ideal anda adalah : ${ideal} kg`
+
+      if (parseInt(berat.value) >= (ideal - 2) && parseInt(berat.value) <= (ideal + 2)) {
+        out.textContent = 'Berat badan ideal';
+      } else {
+        out.textContent = 'Berat badan tidak ideal';
+      }
+    }
+  </script>
+</body>
+</html>
