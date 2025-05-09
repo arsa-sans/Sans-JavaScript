@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lampu Lalu Lintas</title>
+</head>
+<body>
+  <h1>Lampu Lalu Lintas</h1>
+  <label for="suhu">Masukan warna lampu</label>
+  <input type="text" id="lampu">
+  <button onclick="cek()">Cek</button>
+  <p id="display"></p>
+
+  <script>
+  
+    function cek(){
+      const input = document.getElementById('lampu').value.toLowerCase()
+      const hasil = document.getElementById('display')
+
+      if (input == "merah"){
+        hasil.textContent = `berhenti`
+      } else if (input == "kuning"){
+        hasil.textContent = `hati-hati`
+      } else if ( input == "hijau"){
+        hasil.textContent = `maju`
+      } else {
+        hasil.textContent = `bukan warna lampu lalu lintas`
+      }
+    }
+  </script>
+</body>
+</html>
