@@ -11,5 +11,28 @@
   <input type="text" id="hari">
   <button onclick="cek()">cek</button>
   <p id="display"></p>
+  
+  <script>
+    function cek(){
+      const input = document.getElementById('hari').value.toLowerCase()
+      const hasil = document.getElementById('display')
+
+      if (input == 'senin'){
+        hasil.textContent = 'Kemarin tuh hari minggu'
+      } else if ( input == 'selasa'){
+        hasil.textContent = 'Kemarin tuh hari senin'
+      } else if ( input == 'rabu'){
+        hasil.textContent = 'Kemarin tuh hari selasa'
+      } else if ( input == 'kamis'){
+        hasil.textContent = 'Kemarin tuh hari rabu'
+      } else if ( input == 'jumat'){
+        hasil.textContent = 'Kemarin tuh hari kamis'
+      } else if ( input == 'sabtu'){
+        hasil.textContent = 'Kemarin tuh hari jumat'
+      } else if ( input == 'minggu'){
+        hasil.textContent = 'Kemarin tuh hari sabtu'
+      }
+    }
+  </script>
 </body>
 </html>
