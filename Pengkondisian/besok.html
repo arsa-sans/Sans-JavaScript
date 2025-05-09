@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hari kemarin</title>
+</head>
+<body>
+  <h1>Hari kemarin</h1>
+  <label for="hari">Masukan hari</label>
+  <input type="text" id="hari">
+  <button onclick="cek()">cek</button>
+  <p id="display"></p>
+  
+  <script>
+    function cek(){
+      const input = document.getElementById('hari').value.toLowerCase()
+      const hasil = document.getElementById('display')
+
+      if (input == 'senin'){
+        hasil.textContent = 'besok tuh hari selasa'
+      } else if ( input == 'selasa'){
+        hasil.textContent = 'besok tuh hari rabu'
+      } else if ( input == 'rabu'){
+        hasil.textContent = 'besok tuh hari kamis'
+      } else if ( input == 'kamis'){
+        hasil.textContent = 'besok tuh hari jumat'
+      } else if ( input == 'jumat'){
+        hasil.textContent = 'besok tuh hari sabtu'
+      } else if ( input == 'sabtu'){
+        hasil.textContent = 'besok tuh hari minggu'
+      } else if ( input == 'minggu'){
+        hasil.textContent = 'besok tuh hari senin'
+      }
+    }
+  </script>
+</body>
+</html>
