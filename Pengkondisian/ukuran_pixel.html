@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ukuran pixel</title>
+</head>
+<body>
+  <h1>Ukuran pixel</h1>
+  <label for="pixel">Masukan ukuran pixel</label>
+  <input type="number" id="pixel">
+  <button onclick="cek()">Cek</button>
+  <p id="display"></p>
+
+  <script>
+  
+    function cek(){
+      const input = document.getElementById('pixel')
+      const hasil = document.getElementById('display')
+      const pixel = parseInt(input.value)
+
+      if (pixel > 255){
+        hasil.textContent = `Ukuran max pixel adalah 255, ukuran pixel anda menjadi 255`
+      } else if ( pixel < 0){
+        hasil.textContent = `Ukuran min pixel adalah 0, ukuran pixel anda menjadi 0`
+      } else {
+        hasil.textContent = `Ukuran pixel anda adalah ${pixel} pixel`
+      }
+    }
+  </script>
+</body>
+</html>
