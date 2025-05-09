@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Kosinus ke Pecahan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="garis"></div>
+        <h1>Program Tabel CosSecan</h1>
+        <div class="garis"></div>
+        
+        <div class="input">
+            <p>Pilih sudut (derajat):</p>
+            <select id="sudut">
+                <option value="0">0°</option>
+                <option value="30">30°</option>
+                <option value="45">45°</option>
+                <option value="60">60°</option>
+                <option value="90">90°</option>
+                <option value="120">120°</option>
+                <option value="135">135°</option>
+                <option value="150">150°</option>
+                <option value="180">180°</option>
+                <option value="210">210°</option>
+                <option value="225">225°</option>
+                <option value="240">240°</option>
+                <option value="270">270°</option>
+                <option value="300">300°</option>
+                <option value="315">315°</option>
+                <option value="330">330°</option>
+                <option value="360">360°</option>
+            </select>
+        </div>
+        
+        <button onclick="hitungCosecan()">Hitung</button>
+    
+        <div id="hasil"></div>
+        <div id="konfirmasi" style="display: none; margin-top: 20px;">
+            <button onclick="ulangiProgram()">Ulangi</button>
+        </div>
+    </div>
+    
+    <script>
+      const cosecanNya = {
+      0: "<span class='tak-terdefinisi'>Tak Terdefinisi</span>",
+      30: "2",
+      45: "√2",
+      60: "2√3/3",
+      90: "1",
+      120: "2√3/3",
+      135: "√2",
+      150: "2",
+      180: "<span class='tak-terdefinisi'>Tak Terdefinisi</span>",
+      210: "-2",
+      225: "-√2",
+      240: "-2√3/3",
+      270: "-1",
+      300: "-2√3/3",
+      315: "-√2",
+      330: "-2",
+      360: "<span class='tak-terdefinisi'>Tak Terdefinisi</span>"
+    };
+
+    function hitungCosecan() {
+      const sudut = document.getElementById("sudut").value;
+      const hasilElement = document.getElementById("hasil");
+      const konfirmasiElement = document.getElementById("konfirmasi");
+      
+      const nilaiCosecan = cosecanNya[sudut];
+      hasilElement.innerHTML = `
+          <p>csc(${sudut}°) =</p>
+          <div class="pecahan">${nilaiCosecan}</div>
+      `;
+      
+      konfirmasiElement.style.display = "block";
+    }
+
+    function ulangiProgram() {
+      document.getElementById("hasil").innerHTML = "";
+      document.getElementById("konfirmasi").style.display = "none";
+    }
+    </script>
+</body>
+</html>
