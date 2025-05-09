@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program generate name</title>
+</head>
+<body>
+  <h1>Program generate name</h1>
+  <button onclick="generate()">Generate</button>
+  <p id="display"></p>
+
+  <script>
+    let firstNames = ['Asep', 'Budi', 'Fara', 'Farhan', 'Putra'];
+    let lastNames = ['Balon', 'Siregar', 'Sagala', 'Nugraha', 'Direja'];
+
+    function generate(){
+      firstNames = firstNames[Math.floor(Math.random() * firstNames.length)];
+      lastNames = lastNames[Math.floor(Math.random() * lastNames.length)];
+
+      const fullName = `${firstNames} ${lastNames}`
+      document.getElementById('display').textContent = fullName;
+    }
+  </script>
+</body>
+</html>
