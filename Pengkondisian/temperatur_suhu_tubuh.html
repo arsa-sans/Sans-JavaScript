@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperatur Suhu Tubuh</title>
+</head>
+<body>
+  <h1>Temperatur Suhu Tubuh</h1>
+  <label for="suhu">Masukan suhu tubuh</label>
+  <input type="number" id="suhu">
+  <button onclick="cek()">Cek</button>
+  <p id="display"></p>
+
+  <script>
+    
+    function cek(){
+      const temperatur = document.getElementById('suhu')
+      const hasil = document.getElementById('display')
+      const suhu = parseInt(temperatur.value)
+      if (suhu < 0){
+        hasil.textContent = `dapet dry teks dari dia yaa?`
+      } else if (suhu < 35 && suhu > 0){
+        hasil.textContent = `kamu hipotermia`
+      } else if ( suhu == 36){
+        hasil.textContent = `alhamdulillah sehat`
+      } else if ( suhu >= 38 && suhu <= 100){
+        hasil.textContent = `kamu demam`
+      } else if ( suhu > 100){
+        hasil.textContent = `selamat! kamu di neraka`
+      }
+    }
+  </script>
+</body>
+</html>
