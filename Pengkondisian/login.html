@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <label for="username">Masukan username</label>
+  <input type="text" id="username">
+  <label for="password">Masukan password</label>
+  <input type="text" id="password">
+  <button onclick="cek()">Cek</button>
+  <p id="display"></p>
+
+  <script>
+  
+    function cek(){
+      const username = "sansukoyomi"
+      const password = "sanstamvans"
+      const user = document.getElementById('username').value
+      const pw = document.getElementById('password').value
+      const hasil = document.getElementById('display')
+
+      if (user !== username && pw == password){
+        hasil.textContent = "Username tidak tersedia"
+      }else if (user == username && pw !== password){
+        hasil.textContent = "Password salah"
+      }else{
+        hasil.textContent = "Login berhasil"
+      }
+    }
+  </script>
+</body>
+</html>
