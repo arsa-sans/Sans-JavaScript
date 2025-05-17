@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siklus Jam</title>
+</head>
+<body>
+  <h1>Siklus Jam</h1>
+  <label for="jam">Masukan jam</label>
+  <input type="number" id="jam">
+  <button onclick="cek()">Cek</button>
+  <p id="display"></p>
+
+  <script>
+  
+    function cek(){
+      const input = document.getElementById('jam')
+      const hasil = document.getElementById('display')
+      const output = parseInt(input.value)
+
+      if (output >= 4 && output <= 10){
+        hasil.textContent = "Pagi bang"
+      } else if (output >= 11 && output <= 15){
+        hasil.textContent = "Siang bang"
+      } else if (output >= 16 && output <= 18){
+        hasil.textContent = "Sore bang"
+      } else if (output >= 19 && output <= 24){
+        hasil.textContent = "Malam bang"
+      } else if (output >= 1 && output <= 3){
+        hasil.textContent = "Tidur bang"
+      } else{
+        hasil.textContent = "Error bang"
+      }
+    }
+  </script>
+</body>
+</html>
