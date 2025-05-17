@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengelompokan</title>
+</head>
+<body>
+  <h1>Pengelompokan</h1>
+  <label for="pemain">Masukan nomor pemain</label>
+  <input type="number" id="pemain">
+  <button onclick="cek()">Cek</button>
+  <p id="display"></p>
+  <p id="display2"></p>
+
+  <script>
+  
+    function cek(){
+      const input = document.getElementById('pemain')
+      const hasil = document.getElementById('display')
+      const hasil2 = document.getElementById('display2')
+      const output = parseInt(input.value)
+
+      if(output <= 50){
+        hasil.textContent = "Kelompok A"
+        if(output <= 25){
+          hasil2.textContent = "A1"
+        } else if(output >= 25){
+          hasil2.textContent = "A2"
+        }
+      } else if(output > 50){
+        hasil.textContent = "Kelompok B"
+        if(output <= 75){
+          hasil2.textContent = "B1"
+        } else if(output > 75){
+          hasil2.textContent = "B2"
+        }
+      }
+
+    }
+  </script>
+</body>
+</html>
