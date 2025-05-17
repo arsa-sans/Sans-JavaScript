@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nilai Lulus</title>
+  <title>Index Nilai</title>
 </head>
 <body>
-  <h1>Nilai Lulus</h1>
+  <h1>Index Nilai</h1>
   <label for="nilai">Masukan nilai</label>
   <input type="number" id="nilai">
   <button onclick="cek()">Cek</button>
@@ -19,12 +19,16 @@
       const hasil = document.getElementById('display')
       const output = parseInt(input.value)
 
-      if (output > 75){
-        hasil.textContent = "Lulus"
-      } else if (output == 75){
-        hasil.textContent = "Remedial atau tidak?"
-      } else if (output < 75){
-        hasil.textContent = "Tidak Lulus"
+      if (output >= 90){
+        hasil.textContent = "Nilai siswa : A"
+      } else if (output >= 80 && output < 90){
+        hasil.textContent = "Nilai siswa : B"
+      } else if (output >= 70 && output < 80){
+        hasil.textContent = "Nilai siswa : C"
+      } else if (output >= 60 && output < 70){
+        hasil.textContent = "Nilai siswa : D"
+      } else if (output < 60){
+        hasil.textContent = "Nilai siswa : E"
       }
     }
   </script>
