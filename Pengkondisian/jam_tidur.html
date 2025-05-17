@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siklus Jam Tidur</title>
+</head>
+<body>
+  <h1>Siklus Jam Tidur</h1>
+  <label for="jam">Masukan jam tidur</label>
+  <input type="number" id="jam">
+  <button onclick="cek()">Cek</button>
+  <p id="display"></p>
+
+  <script>
+  
+    function cek(){
+      const input = document.getElementById('jam')
+      const hasil = document.getElementById('display')
+      const output = parseInt(input.value)
+
+      if (output >= 1 && output <= 3){
+        hasil.textContent = "Jaga pola tidur bang"
+      } else if (output == 4){
+        hasil.textContent = "Jaga pola tidur bang"
+      } else if (output == 6 || output == 5){
+        hasil.textContent = "Jaga pola tidur bang"
+      } else if (output == 7 || output == 8){
+        hasil.textContent = "Jam tidurnya bagus bang"
+      } else if (output == 10 || output == 9){
+        hasil.textContent = "Kelebihan dikit bang tidurnya"
+      } else if(output >= 11){
+        hasil.textContent = "Gak sekalian mati bang?"
+      } else{
+        hasil.textContent = "Masukan bilangan bulat bang"
+      }
+    }
+  </script>
+</body>
+</html>
