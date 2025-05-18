@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengulangan memakai for of</title>
+</head>
+<body>
+  <h1>Pengulangan memakai for of</h1>
+  <button onclick="start()">Klik</button>
+  <p id="out"></p>
+  <script>
+    function start(){
+      const out = document.getElementById('out')
+      const cars = ["Avanza", "Kijang", "Karimun"];
+      let txt = "";
+      for (let x of cars) {
+        txt += `${x} `;
+      }
+      out.textContent = txt
+    }
+  </script>
+</body>
+</html>
