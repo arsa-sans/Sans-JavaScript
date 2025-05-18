@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menentukan zat</title>
+</head>
+<body>
+  <h1>Menentukan zat</h1>
+  <label for="suhu">Masukan suhu dalam celcius</label>
+  <input type="number" id="suhu">
+  <button onclick="cek()">Cek</button>
+  <p id="display"></p>
+
+  <script>
+    
+    function cek(){
+      const temperatur = document.getElementById('suhu')
+      const hasil = document.getElementById('display')
+      const suhu = parseInt(temperatur.value)
+
+      if (suhu <= 0){
+        hasil.textContent = `zat ini padat`
+      } else if (suhu > 0 && suhu < 100){
+        hasil.textContent = `zat ini cair`
+      } else if ( suhu > 100){
+        hasil.textContent = `zat ini gas`
+      }
+    }
+  </script>
+</body>
+</html>
