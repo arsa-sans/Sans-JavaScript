@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jarak sebenarnya dalam peta</title>
+</head>
+<body>
+  <h1>Jarak sebenarnya dalam peta</h1>
+  <label for="skala">Masukan Skala</label>
+  <input type="number" id="skala">
+  <label for="jp">Masukan jarak pada peta (CM)</label>
+  <input type="number" id="jp">
+  <button id="hitung">Hitung</button>
+  <p>
+    Jarak sebenarnya dalam satuan CM = <span id="hasilJS"></span>
+  </p>
+  <p>
+    Jarak sebenarnya = <span id="Hasil"></span>
+  </p>
+
+  <script>
+    const inpJP = document.getElementById('jp')
+    const inpSkala = document.getElementById('skala')
+    const hitung = document.getElementById('hitung')
+
+    const labelHasil = document.getElementById('Hasil')
+    const labelJS = document.getElementById('hasilJS')
+
+    hitung.addEventListener("click", function(){
+      let sebenarnya = parseInt(inpSkala.value) * parseInt(inpJP.value)
+      
+      let km = sebenarnya / 100000
+
+      labelJS.innerHTML = `${sebenarnya} cm`
+      labelHasil.innerHTML = `${km} km`
+    })
+
+  </script>
+</body>
+</html>
