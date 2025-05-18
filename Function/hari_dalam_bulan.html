@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hari kemarin</title>
+</head>
+<body>
+  <h1>Hari kemarin</h1>
+  <label for="bulan">Masukan nama bulan</label>
+  <input type="text" id="bulan">
+  <button onclick="cek()">cek</button>
+  <p id="display"></p>
+  
+  <script>
+    function cek(){
+      const input = document.getElementById('bulan').value.toLowerCase()
+      const hasil = document.getElementById('display')
+
+      const menuBulan = {
+        "januari": 31,
+        "februari": 29,
+        "maret": 31,
+        "april": 30,
+        "mei": 31,
+        "juni": 30,
+        "juli": 31,
+        "agustus": 31,
+        "september": 30,
+        "oktober": 31,
+        "november": 30,
+        "desember": 31
+      }
+      const hari = menuBulan[input]
+
+      if (hari) {
+        hasil.textContent = `${input} yang Anda pilih punya ${hari} hari.`;
+      } else {
+        hasil.textContent = "Bulan tidak ditemukan. Silakan coba lagi.";
+      }
+    }
+  </script>
+</body>
+</html>
