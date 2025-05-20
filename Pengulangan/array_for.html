@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengulangan memakai for untuk menampilkan array</title>
+</head>
+<body>
+  <h1>Pengulangan memakai for</h1>
+  <button onclick="start()">Klik</button>
+  <p id="out"></p>
+  <script>
+    function start(){
+      const out = document.getElementById('out')
+
+      const buah = ['apel', 'pisang', 'jeruk'];
+
+      for (let i = 0; i < buah.length; i++) {
+        document.writeln(buah[i]);
+      }
+    }
+  </script>
+</body>
+</html>
