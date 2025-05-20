@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Sort</title>
+</head>
+<body>
+  <h1>Array Sort</h1>
+  <button onclick="start()">Klik</button>
+  <script>
+    function start(){
+      const angka = [45, 10, 1, 5, 25, 11];
+      document.write(`sebelum <br>`)
+      document.write(`${angka} <br>`)
+
+      angka.sort(function(a, b){return a - b});
+      document.write(`<br>`)
+      document.write(`asscending <br>`)
+      document.write(`${angka} <br>`)
+
+      angka.sort(function(a, b){return b - a});
+      document.write(`<br>`)
+      document.write(`descending <br>`)
+      document.write(`${angka} <br>`)
+    }
+  </script>
+</body>
+</html>
