@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengulangan memakai for tapi ada continue</title>
+</head>
+<body>
+  <h1>Pengulangan memakai for tapi ada continue</h1>
+  <button onclick="start()">Klik</button>
+  <p id="out"></p>
+  <script>
+    function start(){
+      const out = document.getElementById('out')
+
+      let output = ""
+      for (let i = 0; i < 5; i++) {
+        if (i === 3) {continue;}
+        output += ` Bang <br>`
+      }
+      out.innerHTML = output
+    }
+  </script>
+</body>
+</html>
