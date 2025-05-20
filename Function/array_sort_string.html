@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Sort</title>
+</head>
+<body>
+  <h1>Array Sort</h1>
+  <button onclick="start()">Klik</button>
+  <script>
+    function start(){
+      const buah = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(`sebelum sort <br>`)
+      document.write(`${buah} <br>`)
+
+      buah.reverse();
+      document.write('<br>')
+      document.write(`sesudah revers <br>`)
+      document.write(`${buah} <br>`)
+
+      buah.sort();
+      document.write('<br>')
+      document.write(`sesudah sort <br>`)
+      document.write(`${buah} <br>`)
+      
+    }
+  </script>
+</body>
+</html>
